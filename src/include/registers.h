@@ -80,6 +80,130 @@ enum Transmiters {
 
 enum Receivers {
     
+    /** Receive buffer n control register **/
+    RXB0CTRL = (uint8_t)0x60,
+    RXB1CTRL = (uint8_t)0x70,
+
+    /** RXnBF pin control and status register **/
+    BFPCTRL = (uint8_t)0x0C,
+
+    /** Receive buffer n standard indetifier register high **/
+    RXB0SIDH = (uint8_t)0x61,
+    RXB1SIDH = (uint8_t)0x61,
+
+    /** Receive buffer n standard identifier register low **/
+    RXB0SIDL = (uint8_t)0x62,
+    RXB1SIDL = (uint8_t)0x72,
+
+    /** Receive buffer n extended indentifier register high **/
+    RXB0EID8 = (uint8_t)0x63,
+    RXB1EID8 = (uint8_t)0x73,
+
+    /** Receive buffer n extended identifier register low **/
+    RXB0EID0 = (uint8_t)0x64,
+    RXB1EID0 = (uint8_t)0x74,
+
+    /** Receive buffer n data length code register **/
+    RXB0DLC = (uint8_t)0x65,
+    RXB1DLC = (uint8_t)0x75,
+
+    /** Receive buffer n data byte m register **/
+    /* Buffer 1 */
+    RXB0D0 = (uint8_t)0x66,
+    RXB0D1 = (uint8_t)0x67,
+    RXB0D2 = (uint8_t)0x68,
+    RXB0D3 = (uint8_t)0x69,
+    RXB0D4 = (uint8_t)0x6A,
+    RXB0D5 = (uint8_t)0x6B,
+    RXB0D6 = (uint8_t)0x6C,
+    RXB0D7 = (uint8_t)0x6D,
+
+    /* Buffer 2 */
+    RXB1D0 = (uint8_t)0x76,
+    RXB1D1 = (uint8_t)0x77,
+    RXB1D2 = (uint8_t)0x78,
+    RXB1D3 = (uint8_t)0x79,
+    RXB1D4 = (uint8_t)0x7A,
+    RXB1D5 = (uint8_t)0x7B,
+    RXB1D6 = (uint8_t)0x7C,
+    RXB1D7 = (uint8_t)0x7D,
+};
+
+enum Filters {
+
+    /** Filter n standard identifier register high **/
+    RXF0SIDH = (uint8_t)0x00,
+    RXF1SIDH = (uint8_t)0x04,
+    RXF2SIDH = (uint8_t)0x08,
+    RXF3SIDH = (uint8_t)0x10,
+    RXF4SIDH = (uint8_t)0x14,
+    RXF5SIDH = (uint8_t)0x18,
+
+    /** Filter n standard identifier register low **/
+    RXF0SIDL = (uint8_t)0x01,
+    RXF1SIDL = (uint8_t)0x05,
+    RXF2SIDL = (uint8_t)0x09,
+    RXF3SIDL = (uint8_t)0x11,
+    RXF4SIDL = (uint8_t)0x15,
+    RXF5SIDL = (uint8_t)0x19,
+
+    /** Filter n extended identifier register high **/
+    RXF0SEID8 = (uint8_t)0x02,
+    RXF1SEID8 = (uint8_t)0x06,
+    RXF2SEID8 = (uint8_t)0x0A,
+    RXF3SEID8 = (uint8_t)0x12,
+    RXF4SEID8 = (uint8_t)0x16,
+    RXF5SEID8 = (uint8_t)0x1A,
+
+    /** Filter n extended 1 register low **/
+    RXF0EID0 = (uint8_t)0x03,
+    RXF1EID0 = (uint8_t)0x07,
+    RXF2EID0 = (uint8_t)0x0B,
+    RXF3EID0 = (uint8_t)0x13,
+    RXF4EID0 = (uint8_t)0x17,
+    RXF5EID0 = (uint8_t)0x1B,
+
+    /** Mask n standard identifier register high **/
+    RXM0SIDH = (uint8_t)0x20,
+    RXM1SIDH = (uint8_t)0x24,
+
+    /** Mask n standard identifier register low **/
+    RXM0SIDL = (uint8_t)0x21,
+    RXM1SIDL = (uint8_t)0x25,
+
+    /** Mask n extended identifier register high **/
+    RXM0EID8 = (uint8_t)0x22,
+    RXM1EID8 = (uint8_t)0x26,
+
+    /** Mask n extended identifier register low **/
+    RXM0EID0 = (uint8_t)0x23,
+    RXM1EID0 = (uint8_t)0x27,
+};
+
+enum Config {
+    /** Configuration register 1 **/
+    CNF1 = (uint8_t)0x2A,
+
+    /** Configuration register 2 **/
+    CNF2 = (uint8_t)0x29,
+
+    /** Configuration register 3 **/
+    CNF3 = (uint8_t)0x28,
+};
+
+enum Error {
+    /** Transmit error counter register **/
+    TEC = (uint8_t)0x1C,
+
+    /** Receive error counter register **/
+    REC = (uint8_t)0x1D,
+
+    /** Error flag register **/
+    EFLG = (uint8_t)0x2D,
+};
+
+enum Control {
+
 };
 
 #ifdef __cplusplus
